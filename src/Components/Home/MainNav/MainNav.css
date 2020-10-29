@@ -1,0 +1,9 @@
+.mainNav{
+    color:green !important;
+}
+.navLink:hover{
+    color:green !important;
+}
+.navLink{
+    font-weight: 800;
+}
