@@ -7,7 +7,7 @@ const Contact = () => {
         <div  className="background">
             <MainNav/>
             <Container className="pt-5 mt-5">
-                <Row>
+                <Row className="pt-5 mt-5">
                     <Col md={6}>
             <form action="">
                 <div className="form-group">
