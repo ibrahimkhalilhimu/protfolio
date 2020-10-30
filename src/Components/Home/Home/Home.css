@@ -18,3 +18,17 @@
       font-weight: 800;
     }
   }
+  @media screen and (max-width: 800px) {
+    .center{
+      padding-top: 50px;
+      
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .contactSection{
+      
+      padding-top:20px;
+      
+      
+    }
+  }

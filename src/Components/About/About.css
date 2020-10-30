@@ -1,4 +1,4 @@
-.center{
+/* .center{
     padding-left: 10px;
     padding-right: 10px;
     width:100%;
@@ -6,7 +6,7 @@
     background:#333;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0,0,0,.5);
-}
+} */
 .center h2{
     color:#fff;
     text-transform: uppercase;

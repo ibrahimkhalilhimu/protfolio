@@ -9,7 +9,7 @@ const About = () => {
             <MainNav/>
             <Container className="pt-5 mt-5">
                 <Row className="pt-5">
-                    <Col md={6}>
+                <Col md={6}>
                         <Image style={{width:"200px"}} src={img} thumbnail/>
                         <div className="text-white">
                         <h3 className="text-white">Hi, I am <br/> <span className="text-success pl-5">Ibrahim Khalil</span> </h3>
@@ -71,6 +71,7 @@ const About = () => {
                             </div>
                         </div>
                     </Col>
+                  
                 </Row>
             </Container>
         </div>

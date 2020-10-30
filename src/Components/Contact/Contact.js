@@ -7,26 +7,26 @@ const Contact = () => {
         <div  className="background">
             <MainNav/>
             <Container className="pt-5 mt-5">
-                <Row className="pt-5 mt-5">
+                <Row className="pt-5 mt-5 text-center">
                     <Col md={6}>
-            <form action="">
+            <form action="https://formspree.io/f/xeqpkakr" method="POST">
                 <div className="form-group">
-                           <input type="text" className="form-control" placeholder="Your Email Address "/>
+                           <input type="email" className="form-control" placeholder="Your Email Address" required/>
                        </div>
                        <div className="form-group">
-                           <input type="text" className="form-control" placeholder="Your Name Name"/>
+                           <input type="text" className="form-control" placeholder="Your Name Name" id="name" required/>
                        </div>
                        <div className="form-group">
-                           <textarea name="" className="form-control" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                           <textarea name="text" className="form-control" id="" cols="30" rows="10" placeholder="Your message" required></textarea>
                        </div>
                        <div className="form-group ">
-                           <button style={{padding:"8px 50px"}} type="button" className="btn bg-success text-white"> Send </button>
+                           <button style={{padding:"8px 50px"}} type="submit" className="btn bg-success text-white"> Send </button>
                            </div>
                 </form>
                 </Col>
-                <Col md={6}>
-                    <div className="text-white pl-5 ml-5">
-                        <h2 className="text-center">Web Developer</h2><br/>
+                <Col md={6} >
+                    <div className="text-white pl-5  contactSection">
+                        <h2 style={{borderBottom:"2px solid green"}}>Web Developer</h2><br/>
                     <h3>Name: Ibrahim Khalil</h3>
                     <h3>Phone: +8801874874852</h3>
                     <h3>Email: <small>ibrahimkhalilhemu1@gmail.com</small></h3>

@@ -1,0 +1,21 @@
+.projectBackground{
+    background-color: #0a192f;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 800px) {
+    .projectBackground{
+        background-color: #0a192f;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden
+    }
+  }
+
+.footer{
+    border:none;
+    background-color:white;
+}
+.card:hover{
+    box-shadow: 5px 5px 10px;
+}
