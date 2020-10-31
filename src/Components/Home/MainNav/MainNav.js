@@ -15,7 +15,7 @@ const MainNav = () => {
           <NavLink to="/project" activeClassName="mainNav" className="pr-4 text-white pt-2 navLink">Project</NavLink>
           <NavLink to="/blog"  activeClassName="mainNav" className="pr-4 text-white pt-2 navLink">Blog</NavLink>
           <NavLink to="/contact"  activeClassName="mainNav" className="pr-4 text-white pt-2 navLink">Contact</NavLink>
-          <Button variant="outline-success">Download Resume</Button>
+          <a href='https://drive.google.com/file/d/1QcCZkBHSVL88IUEJD03nofQ5dxbRPyBA/view?usp=sharing'download="Resume" target="_blank" > <Button variant="outline-success" >Download Resume</Button></a>
         </Nav>
        
       </Navbar.Collapse>

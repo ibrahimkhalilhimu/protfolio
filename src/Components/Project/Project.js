@@ -3,6 +3,15 @@ import { CardDeck, Container,Card, Row, Col,Button } from 'react-bootstrap';
 import MainNav from '../Home/MainNav/MainNav';
 import ProjectData from '../../FakeData/ProjectData'
 import './Project.css'
+import { bounceInDown } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
+
+const styles = {
+    bounceInDown: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(bounceInDown, 'bounceInDown')
+  }
+}
 
 const Project = () => {
 
@@ -20,8 +29,16 @@ console.log(data);
                         {
                         projectInfo.map(info=>
                             <Col md={4}>
+                                 <StyleRoot>
+                                 <div className="test" style={styles.bounceInDown}>
                             <Card className="mb-4 card">
-                               <Card.Img variant="top" src={info.img} style={{width:"100%",height:"200px"}} />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div className="inner">
+                               <Card.Img className="img" variant="top" src={info.img} style={{width:"100%",height:"200px"}} />
+                               </div>
                         <Card.Body>
                         <Card.Title>{info.name}</Card.Title>
                         <Card.Text>
@@ -37,6 +54,8 @@ console.log(data);
                         </a>
                         </Card.Footer>  
                             </Card>
+                            </div>
+                            </StyleRoot>
                             </Col>
                             )
                         }

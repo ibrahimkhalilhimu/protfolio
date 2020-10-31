@@ -1,5 +1,7 @@
 .projectBackground{
     background-color: #0a192f;
+    /* background-image: linear-gradient(to bottom,#141414,#414040);
+    background-color:black; */
     width: 100%;
     height: 100%;
 }
@@ -14,8 +16,53 @@
 
 .footer{
     border:none;
+   
     background-color:white;
 }
-.card:hover{
-    box-shadow: 5px 5px 10px;
+.card{  
+   
+ border: none;
+ ;
+ 
+}
+
+
+.card:after,
+.card:before{
+    content:"";
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    left: -5px;
+    bottom: -2px;
+    width:calc(100% + 10px);
+    height: calc(100% + 10px);
+background-image: linear-gradient(35deg,#ff1400,#ff2200,#00ff4e,#00ffce,#263c9a,#7500ff,#0010d3,#ff0076,#ff1400,#ff2200,#00ff4e,#00ffce,#263c9a,#7500ff,#0010d3,#ff0076);
+background-size: 400%;
+animation:shadow 15s linear infinite;
+z-index: -1;
+} 
+.card:after{
+    filter: blur(10px);
+}
+@keyframes shadow{
+    0% {
+        background-position: 0 0;
+    }
+   50% {
+        background-position: 400%;
+    }
+   100% {
+        background-position: 0 0;
+    }
+}
+
+.inner{
+    overflow: hidden;
+}
+.img{
+    transition: all 1.5s ease;
+}
+.img:hover{
+    transform: scale(1.5)
 }
