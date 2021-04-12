@@ -6,6 +6,8 @@ import img from '../../image.png'
 import { bounceInDown } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import Typical from 'react-typical'
+import { ThemeSet } from '../../App';
+import { useContext } from 'react';
 
 const styles = {
     bounceInDown: {
@@ -13,18 +15,22 @@ const styles = {
     animationName: Radium.keyframes(bounceInDown, 'bounceInDown')
   }
 }
+
+
 const About = () => {
+    const [darkTheme, setDarkTheme] =useContext(ThemeSet)
+
     return (
-        <div className="background">
-            <MainNav/>
+        <div className="about">
+            {/* <MainNav/> */}
             <Container className="pt-5 mt-5">
                 <Row className="pt-5">
                 <Col md={6}>
                 <StyleRoot>
                <div className="test" style={styles.bounceInDown}>
                         <Image style={{width:"200px"}} src={img} thumbnail/>
-                        <div className="text-white">
-                        <h3 className="text-white">Hi, I am <br/> <span className="text-success pl-5">Ibrahim Khalil</span> </h3>
+                        <div className={darkTheme?'text-white':'text-dark'}>
+                        <h3 className={darkTheme?'text-white':'text-dark'}>Hi, I am <br/> <span className="text-success pl-5">Ibrahim Khalil</span> </h3>
                         <h4>I am   <Typical
                 loop={Infinity}
                 wrapper = "b"

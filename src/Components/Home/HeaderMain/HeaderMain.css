@@ -1,35 +1,28 @@
-.header ul{
-    list-style-type: none;
-    display: flex;
-    padding-top: 50px;
-    
-    justify-content: center;
+.header ul {
+  list-style-type: none;
+  display: flex;
+  padding-top: 50px;
+
+  justify-content: center;
 }
 .header ul li {
-    color: white;
- border: 2px solid #ff4a57;
- border-radius: 50%;
-margin-left: 20px;
-
+  color: white;
+  border: 2px solid #ff4a57;
+  border-radius: 50%;
+  margin-left: 20px;
 }
 
-.header ul li:hover{
-    background-color:#ff4a57;
+.header ul li:hover {
+  background-color: #ff4a57;
 }
 @media screen and (max-width: 800px) {
-    .header ul{
-  padding-top: 50px;
-  justify-content: center;
-      
-    }
+  .header ul {
+    padding-top: 50px;
+    justify-content: center;
   }
-  @media screen and (max-width: 800px) {
-    .headerMain{
-     
-     text-align: center; 
-    }
+}
+@media screen and (max-width: 800px) {
+  .headerMain {
+    text-align: center;
   }
-  .header ul li a {
-      color: white;
-  }
-  
+}

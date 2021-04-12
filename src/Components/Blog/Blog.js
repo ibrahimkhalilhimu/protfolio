@@ -1,13 +1,55 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import MainNav from '../Home/MainNav/MainNav';
+import { Button, Card, CardDeck, Col, Container, Row } from 'react-bootstrap';
+import { bounceInDown } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
+import BlogData from '../../FakeData/BlogData'
+import { useState } from 'react';
+import './Blog.css'
 
 const Blog = () => {
+    const styles = {
+        bounceInDown: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(bounceInDown, 'bounceInDown')
+      }
+    }
+    const [blogData,setBlogData] = useState(BlogData)
+    console.log(blogData);
     return (
-        <div className="background">
-        <MainNav/>
-        <Container className="pt-5 mt-5 text-white">
-            <h2 className="text-center">Comming soon.......</h2>
+        <div className="background blogSide">
+        <Container className="mt-5 text-white">
+        <h2 style={{borderBottom:"4px solid green"}} className="text-success">My Blog</h2>
+        <CardDeck className="pt-4">
+                        <Row>
+                        {
+                        blogData.map(blogInfo=>
+                            <Col md={4}>
+                                 <StyleRoot>
+                                 <div className="test" style={styles.bounceInDown}>
+                            <Card className="mb-4 card">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div className="inner">
+                               <Card.Img className="img" variant="top" src={blogInfo.img} style={{width:"100%",height:"200px"}} />
+                               </div>
+                        <Card.Body>
+                        <Card.Title className="text-success">{blogInfo.name}</Card.Title>
+                        </Card.Body>
+                        <Card.Footer className="footer text-center">
+                        <a href={blogInfo.live} target="_blank">
+                            <Button className="bg-success"> Live Site</Button>
+                        </a>
+                        </Card.Footer>  
+                            </Card>
+                            </div>
+                            </StyleRoot>
+                            </Col>
+                            )
+                        }
+                        </Row>
+                    </CardDeck>   
         </Container>
         </div>
     );

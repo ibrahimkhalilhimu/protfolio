@@ -1,11 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import MainNav from '../Home/MainNav/MainNav';
+import { ThemeSet } from '../../App';
 
 const Contact = () => {
+    const [darkTheme, setDarkTheme]= useContext(ThemeSet);
     return (
         <div  className="background">
-            <MainNav/>
+        
             <Container className="pt-5 mt-5">
                 <Row className="pt-5 mt-5 text-center">
                     <Col md={6}>
@@ -25,7 +27,7 @@ const Contact = () => {
                 </form>
                 </Col>
                 <Col md={6} >
-                    <div className="text-white pl-5  contactSection">
+                    <div className={darkTheme?'text-white   contactSection':'text-dark contactSection'}>
                         <h2 style={{borderBottom:"2px solid green"}}>Web Developer</h2><br/>
                     <h3>Name: Ibrahim Khalil</h3>
                     <h3>Phone: +8801874874852</h3>

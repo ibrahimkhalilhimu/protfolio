@@ -1,6 +1,5 @@
 import {React,useState} from 'react';
 import { CardDeck, Container,Card, Row, Col,Button } from 'react-bootstrap';
-import MainNav from '../Home/MainNav/MainNav';
 import ProjectData from '../../FakeData/ProjectData'
 import './Project.css'
 import { bounceInDown } from 'react-animations';
@@ -20,8 +19,7 @@ const [projectInfo,setProjectInfo] = useState(data)
 console.log(data);
 
     return (
-        <div className="projectBackground"> 
-                <MainNav/>
+        <div  className="projectBackground"> 
             <Container className="pt-5">
                 <h2 style={{borderBottom:"4px solid green"}} className="text-success pt-5">My Project</h2>
                     <CardDeck className="pt-4 mt-5">
